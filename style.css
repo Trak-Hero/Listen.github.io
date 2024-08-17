@@ -1,0 +1,260 @@
+body { 
+    background-color: rgb(0,0,0);
+}
+
+.nav-bar {
+    list-style-type: none;
+    display: flex;
+    z-index: 1;
+}
+
+#nav-ul {
+    list-style-type: none;
+    display: flex;
+    z-index: 1;
+  }
+
+.nav-li {
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 100px;
+}
+
+.nav-a {
+    text-decoration: none;
+    color:beige;
+
+}
+
+.tt{
+    color: rgb(255,255,255);
+    background-color: black;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 10;
+    font-style: normal;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.main-title {
+    color: rgb(255,255,255);
+    background-color: black;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    display: flex;
+    width: 100%;
+    height: 800px;
+    align-items: center;
+    justify-content: center;
+}
+
+.para{
+    color: rgb(255,255,255);
+    background-color: black;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    display: flex;
+    width: 100%;
+    height: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail{
+    color: rgb(255,255,255);
+    background-color: black;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    display: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.detail2{
+    color: rgb(255,255,255);
+    background-color: black;
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: relative;
+    font-size: 40px;
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin: 5px;
+}
+
+.fly-in-container{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height of the viewport */
+}
+
+.fly-in-text {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.fly-in-text li{
+    display: inline-block;
+    margin-right: 50px; 
+    color: rgb(255,255,255);
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100px;
+    transition-delay: 2s;
+    opacity: 1;
+    transition: all 2.5s ease; 
+}
+
+.fly-in-text li:last-child{
+    margin-right: 0;
+}
+
+.fly-in-text.hidden li{
+    opacity: 0;
+}
+
+.fly-in-text.hidden li:nth-child(1){transform: translateX(-200px) translateY(-200px);}
+.fly-in-text.hidden li:nth-child(2){transform: translateX(20px) translateY(100px);}
+.fly-in-text.hidden li:nth-child(3){transform: translateX(-150px) translateY(-800px);}
+.fly-in-text.hidden li:nth-child(4){transform: translateX(10px) translateY(-200px);}
+.fly-in-text.hidden li:nth-child(5){transform: translateX(-300px) translateY(200px);}
+.fly-in-text.hidden li:nth-child(6){transform: translateX(20px) translateY(-20px);}
+.fly-in-text.hidden li:nth-child(7){transform: translateX(30px) translateY(200px);}
+
+.explain{
+    display: inline-block;
+    margin-right: 50px; 
+    color: rgb(255,255,255);
+    font-family: "Libre Caslon Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 20px;
+    transition-delay: 2s;
+    opacity: 1;
+    transition: all 2.5s ease; 
+}
+
+.ripple-container{
+  position: absolute; /* Position it absolutely */
+  top: 50%;           /* Center it vertically */
+  left: 50%;          /* Center it horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to center */
+  z-index: 0;         /* Ensure it's behind the text */
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  transition-delay: 5s;
+}
+
+.ripple-container2{
+    position: absolute; /* Position it absolutely */
+    top: 50%;           /* Center it vertically */
+    left: 50%;          /* Center it horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to center */
+    z-index: 0;         /* Ensure it's behind the text */
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    transition-delay: 5s;
+  }
+
+
+
+.ripple-container .box{
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+  transition-delay: 10s;
+  
+}
+
+.ripple-container2 .box2{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: grid;
+    align-items: grid;
+    margin: 50px 0;
+    transition-delay: 10s;
+    
+  }
+
+
+
+.ripple-container .box span{
+  position: absolte;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  animation: animate 20s linear infinite;
+  animation-delay: calc(-0.5s * var(--i))
+  
+}
+
+.ripple-container2 .box2 span{
+    position: absolte;
+    box-sizing: border-box;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    animation: animate 20s linear infinite;
+    animation-delay: calc(-0.5s * var(--i))
+    
+  }
+
+
+@keyframes animate{
+  0% {
+    transform: translate(-50%, -50%) scale(0); /* Start small */
+    opacity: 0.2; /* Start fully visible */
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(200); /* Scale up */
+    opacity: 0.1; /* Fade out */
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(300); /* End at full size */
+    opacity: 0; /* Fully fade out */
+  }
+}
+
+.tiles-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tile {
+    font-family: "Libre Caslon Text", serif;
+    color: beige;
+    font-style: italic;
+    flex: 1 0 300px;
+    background-color: #141414;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 80px;
+    border-radius: 30px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.tile:hover {
+    transform: scale(1.05) translate(0%,-10%);
+}
